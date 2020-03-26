@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>Success Conf!</h1>
-        <et-input />
+        <et-input type="textarea" placeholder="这是placeholder"/>
     </div>
 </template>
 
@@ -12,6 +12,8 @@
 </script>
 
 <style lang="scss">
+    @import '../../packages/theme-chalk/input.scss';
+
     div{
         background: blue;
         h1{

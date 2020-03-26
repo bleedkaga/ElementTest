@@ -3,7 +3,7 @@
       "ga": true,
       "chrome": true
     },
-    "extends": ["standard", "plugin:vue/recommended"],
+    "extends": ["elemefe", "plugin:vue/recommended"],
     "rules": {
       "no-restricted-globals": ["error", "event", "fdescribe"],
       "semi": 0,
