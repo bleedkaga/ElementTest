@@ -1,6 +1,7 @@
 <template>
     <div>
         <h1>Success Conf!</h1>
+        <et-input />
     </div>
 </template>
 

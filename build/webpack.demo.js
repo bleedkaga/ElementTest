@@ -18,6 +18,10 @@ module.exports = {
         publicPath: '/',
         hot: true
     },
+    resolve: {
+        alias: config.alias,
+        extensions: ['.js', '.vue', '.json']
+    },
     module: {
         rules: [{
                 test: /\.vue$/,
