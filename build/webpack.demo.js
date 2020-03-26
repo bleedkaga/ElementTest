@@ -3,6 +3,7 @@ const config = require('./config')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ProgressBarWebpackPlugin = require('progress-bar-webpack-plugin')
 
 module.exports = {
     mode: process.env.NODE_ENV,
@@ -37,10 +38,19 @@ module.exports = {
                 include: process.cwd(),
                 exclude: config.jsexclude,
                 loader: 'babel-loader'
+            },
+            {
+                test: /.(s?css)$/,
+                loader: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader'
+                ]
             }
         ]
     },
     plugins: [
+        new ProgressBarWebpackPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new VueLoaderPlugin(),
         new HtmlWebpackPlugin({

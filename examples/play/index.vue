@@ -10,6 +10,12 @@
     }
 </script>
 
-<style>
-
+<style lang="scss">
+    div{
+        background: blue;
+        h1{
+            color: red
+        }
+    }
+       
 </style>
