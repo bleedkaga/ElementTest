@@ -1,0 +1,18 @@
+{
+    "globals": {
+      "ga": true,
+      "chrome": true
+    },
+    "extends": ["standard", "plugin:vue/recommended"],
+    "rules": {
+      "no-restricted-globals": ["error", "event", "fdescribe"],
+      "semi": 0,
+      "indent": 0
+    },
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    }
+  }

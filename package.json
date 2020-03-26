@@ -1,0 +1,39 @@
+{
+    "name": "element-test",
+    "version": "1.0.0",
+    "description": "仿制的ElementUI",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "serve": "webpack-dev-server --config build/webpack.demo.js"
+    },
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "vue": "^2.6.11",
+        "webpack": "^4.42.1",
+        "webpack-cli": "^3.3.11"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.9.0",
+        "babel": "^6.23.0",
+        "babel-loader": "^8.1.0",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-stage-0": "^6.24.1",
+        "eslint": "^6.8.0",
+        "eslint-config-standard": "^14.1.1",
+        "eslint-loader": "^3.0.3",
+        "eslint-plugin-html": "^6.0.0",
+        "eslint-plugin-import": "^2.20.1",
+        "eslint-plugin-json": "^2.1.1",
+        "eslint-plugin-node": "^11.0.0",
+        "eslint-plugin-promise": "^4.2.1",
+        "eslint-plugin-standard": "^4.0.1",
+        "eslint-plugin-vue": "^6.2.2",
+        "eslint-standard": "^1.0.2",
+        "html-webpack-plugin": "^4.0.1",
+        "vue-loader": "^15.9.1",
+        "vue-template-compiler": "^2.6.11",
+        "webpack-dev-server": "^3.10.3"
+    }
+}
