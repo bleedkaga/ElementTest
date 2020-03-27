@@ -1,10 +1,12 @@
 import EtInput from '../packages/input'
+import EtDialog from '../packages/dialog'
 
 const components = [
-    EtInput
+    EtInput,
+    EtDialog
 ]
 
-const install = (Vue, opts) => {
+const install = (Vue) => {
     components.forEach(component => {
         Vue.component(component.name, component)
     })
