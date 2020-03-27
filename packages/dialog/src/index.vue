@@ -9,10 +9,14 @@
       class="et-dialog__wrapper"
       @click.self="handleWrapperClick"
     >
-      <div class="et-dialog">
+      <div
+        class="et-dialog"
+        :style="style"
+      >
         <div class="et-dialog__header">
           <slot name="title">
             <span class="et-dialog__title">{{ title }}</span>
+            <span class="el-icon-close" />
           </slot>
         </div>
         <div
@@ -33,13 +37,12 @@
 </template>
 
 <script>
+    import Popup from 'element-ui-test/src/utils/popup'
     export default {
         name: 'EtDialog',
+        mixins: [Popup],
         props: {
-            visible: {
-                type: Boolean,
-                default: true
-            },
+
             title: {
                 type: String,
                 default: ''
@@ -53,11 +56,35 @@
                 default() {
                     return () => {}
                 }
+            },
+            top: {
+                type: String,
+                default: '15vh'
+            },
+            fullscreen: {
+                type: Boolean,
+                default: false
+            }
+        },
+        computed: {
+            style() {
+                let style = {};
+                if (!this.fullscreen) {
+                    style.marginTop = this.top;
+                    if (this.width) {
+                        style.width = this.width
+                    }
+                }
+                return style
             }
         },
         mounted() {
             if (this.visible) {
                 this.rendered = true
+                this.open();
+                if (this.appendToBody) {
+                document.body.appendChild(this.$el);
+                }
             }
         },
         methods: {

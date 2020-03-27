@@ -8,7 +8,9 @@
       "no-restricted-globals": ["error", "event", "fdescribe"],
       "semi": 0,
       "indent": 0,
-      "eol-last": 0
+      "eol-last": 0,
+      "space-before-function-paren": 0,
+      "wrap-iife": 0
     },
     "parserOptions": {
       "ecmaVersion": 6,
